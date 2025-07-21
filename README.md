@@ -1,16 +1,9 @@
-This project sets up a real-time monitoring stack using \*\*Prometheus\*\* and \*\*Grafana\*\* to track metrics from a running \*\*Nakama game server\*\*, along with \*\*CockroachDB\*\* as the backend. It includes a simulated login script to generate metric data.
-
-
+This project sets up a real-time monitoring stack using **Nakama**, **Prometheus** and **Grafana**.
+It also includes a python script that simulates login to Nakama server, enabling Prometheus to scrape useful metric which are visualized in Grafan dashboards.
 
 ---
 
-
-
-
-
-\## Stack Components
-
-
+## Stack Components
 
 \- \*\*Nakama\*\* – Game server exposing metrics on `/metrics`
 
