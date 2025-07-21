@@ -5,38 +5,29 @@ It also includes a python script that simulates login to Nakama server, enabling
 
 ## Stack Components
 
-\- \*\*Nakama\*\* – Game server exposing metrics on `/metrics`
+* \*\*Nakama\*\* – Game server exposing metrics on `/metrics`
 
-\- \*\*CockroachDB\*\* – Persistent storage for Nakama
+* \*\*CockroachDB\*\* – Persistent storage for Nakama
 
-\- \*\*Prometheus\*\* – Scrapes and stores metrics from Nakama
+* \*\*Prometheus\*\* – Scrapes and stores metrics from Nakama
 
-\- \*\*Grafana\*\* – Visualizes login metrics via dashboards
+* \*\*Grafana\*\* – Visualizes login metrics via dashboards
 
-\- \*\*Python script\*\* – Simulates multiple user logins to generate metrics
-
-
+* \*\*Python script\*\* – Simulates multiple user logins to generate metrics
 
 ---
-
-
 
 \## Requirements
 
 * Docker \& Docker Compose
 * Python 3.7+
-
-Internet connection to pull images
+* Internet connection to pull images
 
 
 
 \## Getting Started
 
-
-
-\### 1. Clone the repository
-
-
+* 1. Clone the repository
 
 ```bash
 
@@ -44,10 +35,7 @@ git clone https://github.com/your-username/prometheus-grafana-monitoring.git
 
 cd prometheus-grafana-monitoring
 
-
-
 run docker compose up
-
 
 
 \# This will start:
@@ -59,9 +47,6 @@ run docker compose up
 * CockroachDB console at http://localhost:8080
 
 
-
-
-
 \## Login Credentials
 
 \# Nakama admin panel:
@@ -70,12 +55,10 @@ run docker compose up
 * Password: password
 
 
-
 \# Grafana Dashboard:
 
 * user: admin
 * password: admin
-
 
 
 \## To simulate logins:
@@ -84,9 +67,7 @@ run docker compose up
 * python simulate\_logins.py
 
 
-
 \## Metrics You Can Track
-
 
 
 | Metric                                | Description          |
@@ -102,10 +83,9 @@ run docker compose up
 | `nakama\_db\_total\_open\_conns`          | DB connections       |
 
 
-
 You can visualize metrics using PromQL queries in Grafana like
 
-\# rate(nakama\_AuthenticateEmail\_count\[$\_\_rate\_interval])
+* rate(nakama\_AuthenticateEmail\_count\[$\_\_rate\_interval])
 
 
 
