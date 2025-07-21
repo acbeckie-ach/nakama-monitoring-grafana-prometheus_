@@ -87,6 +87,15 @@ You can visualize metrics using PromQL queries in Grafana like
 
 * rate(nakama\_AuthenticateEmail\_count\[$\_\_rate\_interval])
 
+## Grafana Dashboards
+
+The `dashboards/` folder contains pre-configured Grafana dashboard JSONs.
+* `nakama-monitoring.json` – Tracks login rate, latency, DB connections, and request count.
+
+To import:
+1. Go to Grafana → Dashboards → Import
+2. Upload or paste the JSON
+3. Select Prometheus as the data source
 
 
 
